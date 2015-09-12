@@ -1,0 +1,36 @@
+
+/*
+    helper classes
+*/
+
+.centered {
+    margin: 0 auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.strike-through {
+    text-decoration: line-through;
+}
+
+/*
+    todo classes
+*/
+
+.todo-main-heading {
+    text-align: center;
+}
+
+.todo-container {
+    border: 1px solid #CCCCCC;
+}
+
+.todo-list-heading {
+    text-align: center;
+}
+
+.todo-list li {
+    text-align: center;
+}

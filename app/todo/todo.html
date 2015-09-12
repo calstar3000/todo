@@ -1,0 +1,36 @@
+
+
+<h1 class="todo-main-heading">TODO</h1>
+<div class="container todo-container" ng-controller="TodoListController as todoCtrl">
+    <div class="row">
+        <div class="four columns">
+            <h5 class="todo-list-heading">Yesterday</h5>
+            <ul class="todo-list">
+                <li ng-repeat="item in todoCtrl.yesterday.items">
+                    <p ng-class="{'strike-through':item.done}">{{ item.title }}</p>
+                </li>
+            </ul>
+        </div>
+        <div class="four columns">
+            <h5 class="todo-list-heading">Today</h5>
+            <ul class="todo-list">
+                <li ng-repeat="item in todoCtrl.today.items">
+                    <p ng-class="{'strike-through':item.done}">{{ item.title }} <input type="checkbox" ng-model="item.done" /></p>
+                </li>
+            </ul>
+            <form name="todoForm" ng-submit="todoCtrl.addTodo()">
+                <label for="newTodo">New todo:</label>
+                <input type="text" name="new-todo" id="newTodo" class="u-full-width" ng-model="todoCtrl.newTodo.title" />
+                <input type="submit" class="button" value="Submit" />
+            </form>
+        </div>
+        <div class="four columns">
+            <h5 class="todo-list-heading">Tomorrow</h5>
+            <ul class="todo-list">
+                <li ng-repeat="item in todoCtrl.tomorrow.items">
+                    <p ng-class="{'strike-through':item.done}">{{ item.title }}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

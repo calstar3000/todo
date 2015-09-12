@@ -9,6 +9,8 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
-
+.controller('TodoListController', [function() {
+  this.items = items;
 }]);
+
+var items = ['Do a Pluralsite course', 'Clean house', 'Supermarket shop'];
